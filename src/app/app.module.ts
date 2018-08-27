@@ -7,6 +7,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 //page components
 import { AppComponent } from './app.component';
 
+
+import { AuthGuard } from './components/authentication/auth.guard';
+
 //shared components
 import { ModalsComponent } from './components/shared/modals/modals.component';
 import { HeaderComponent } from './components/shared/header/header.component';
@@ -21,16 +24,29 @@ const APP_ROUTES: Routes = [
     component: LoginComponent
   },
   { path: 'login', pathMatch: 'full', redirectTo: 'login' },
+  { path: 'home', component: LoginComponent, canActivate: [AuthGuard] },
   { path: '', component:  LoginComponent,
-  children: [  
-    /*
-    { path: 'comunidades', component: ComunidadesComponent },
-    { path: 'comunidad/:id', component: ComunidadDetalleComponent },
+    children: [  
+      /*
+      { path: 'comunidades', component: ComunidadesComponent },
+      { path: 'comunidad/:id', component: ComunidadDetalleComponent },
 
-    { path: '**', pathMatch: 'full', redirectTo: 'publicaciones' }*/
-  ]
-}]/*
- */
+      { path: '**', pathMatch: 'full', redirectTo: 'publicaciones' }*/
+    ]
+  }
+]
+
+/*
+const appRoutes: Routes = [
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: 'DashboardComponent', component: DashboardComponent, canActivate: [AuthGuard]},
+  { path: 'login', component: LoginComponent},
+  { path: 'adscreen', component: AdscreenComponent, canActivate: [AuthGuard]},
+  { path: 'visor-dispositivos', component: VisorDispositivosComponent, canActivate: [AuthGuard]},
+  { path: '**', component: LoginComponent }
+];
+
+*/
 
 
 @NgModule({
@@ -47,7 +63,9 @@ const APP_ROUTES: Routes = [
     NgbModule,
     
   ],
-  providers: [],
+  providers: [
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
