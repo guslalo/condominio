@@ -16,22 +16,21 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { MainComponent } from './components/shared/main/main.component';
 import { LoginComponent } from './components/authentication/login/login.component';
+import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 
 
 const appRoutes: Routes = [
   {
-    path: '',
-    component: LoginComponent
+    path: '', component: LoginComponent
   },
-  { path: 'login', pathMatch: 'full', redirectTo: 'login' },
-  { path: 'home', component: LoginComponent, canActivate: [AuthGuard] },
-  { path: '', component:  LoginComponent,
+  //{ path: 'login', pathMatch: 'full', redirectTo: 'login' },
+  //{ path: 'dashboard', component: MainComponent, canActivate: [AuthGuard] },
+  { path: 'dashboard', component:  MainComponent,
     children: [  
-      /*
-      { path: 'comunidades', component: ComunidadesComponent },
-      { path: 'comunidad/:id', component: ComunidadDetalleComponent },
+      { path: '', component: DashboardComponent },
+      /*{ path: 'comunidad/:id', component: ComunidadDetalleComponent },
 
-      { path: '**', pathMatch: 'full', redirectTo: 'publicaciones' }*/
+      { path: '**', pathMatch: 'full', redirectTo: 'publicaciones' } */
     ]
   }
 ]
@@ -56,7 +55,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
