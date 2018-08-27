@@ -18,7 +18,7 @@ import { MainComponent } from './components/shared/main/main.component';
 import { LoginComponent } from './components/authentication/login/login.component';
 
 
-const APP_ROUTES: Routes = [
+const appRoutes: Routes = [
   {
     path: '',
     component: LoginComponent
@@ -61,7 +61,10 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     NgbModule,
-    
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: false },
+    ), 
   ],
   providers: [
     AuthGuard
