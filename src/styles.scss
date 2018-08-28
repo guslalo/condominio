@@ -5,6 +5,11 @@ body{
     app-root {
         height:100vh !important;  
     }
+    ul{
+        li {
+            list-style: none;
+        }
+    }
 }
 
 .wrap {
@@ -13,11 +18,18 @@ body{
     height: 100%;
 }
 .wrapLeft {
-    background: red;
+    background: #3a4651;
     width:20%;
 }
 .wrapRight {
-    background: blue;
+    background: #f0f3f6;
     width:80%;
+    height: 100%;
+}
+.wrapHeader {
+    background:#d7dde4;
+    display: inline-block;
+    width: 100%;
+    height: 75px;
 }
   
