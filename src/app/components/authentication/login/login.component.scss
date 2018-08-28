@@ -18,11 +18,14 @@
   }
     
 }
-
+.submit {
+  cursor: pointer;
+}
 div.login-main-content {
  
   
-  background: linear-gradient(130deg, #66a595, #1f9e9f, #388cb4, #8d79bd, #c283c8);
+  background: linear-gradient(130deg, #388cb4, #8d79bd);
+ 
   background-size: 1000% 1000%;
   -webkit-animation: GradientAnimation 20s ease infinite;
   -moz-animation: GradientAnimation 20s ease infinite;

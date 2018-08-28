@@ -19,6 +19,7 @@ import { ModalsComponent } from './components/shared/modals/modals.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { MainComponent } from './components/shared/main/main.component';
+import { SidebarComponent } from './components/shared/sidebar/sidebar.component';
 
 
 const appRoutes: Routes = [
@@ -58,7 +59,8 @@ const appRoutes: Routes = [
     FooterComponent,
     MainComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

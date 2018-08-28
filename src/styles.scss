@@ -7,4 +7,17 @@ body{
     }
 }
 
+.wrap {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+.wrapLeft {
+    background: red;
+    width:20%;
+}
+.wrapRight {
+    background: blue;
+    width:80%;
+}
   
