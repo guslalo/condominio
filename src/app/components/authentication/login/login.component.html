@@ -1,5 +1,32 @@
-<div class="login">
-<p routerLink="/dashboard">
-  login works!
-</p>
+
+<div class="login-flex-container">
+  <div class="login-main-content" >
+
+    <div class="login-item">
+        <div class="logoLogin">
+          <h2>AppCondo  <i class="material-icons"> domain</i></h2>
+        </div>
+      <form action="" method="post" class="form form-login">
+        <div class="form-field">
+          <label class="user" for="login-username">
+            <i class="material-icons">person</i>
+          </label>
+          <input id="login-username" type="text" class="form-input" placeholder="Username" required>
+        </div>
+
+        <div class="form-field">
+          <label class="lock" for="login-password">
+            <i class="material-icons">
+              lock
+            </i>
+          </label>
+          <input id="login-password" type="password" class="form-input" placeholder="Password" required>
+        </div>
+
+        <div class="form-field">
+          <input type="submit" value="Entrar"  routerLink="/dashboard">
+        </div>
+      </form>
+    </div>
+  </div>
 </div>

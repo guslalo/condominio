@@ -1,13 +1,17 @@
+//angular
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+//modulos
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-//page components
+//pages components
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 
-
+//authentication
+import { LoginComponent } from './components/authentication/login/login.component';
 import { AuthGuard } from './components/authentication/auth.guard';
 
 //shared components
@@ -15,8 +19,6 @@ import { ModalsComponent } from './components/shared/modals/modals.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { MainComponent } from './components/shared/main/main.component';
-import { LoginComponent } from './components/authentication/login/login.component';
-import { DashboardComponent } from './components/pages/dashboard/dashboard.component';
 
 
 const appRoutes: Routes = [
