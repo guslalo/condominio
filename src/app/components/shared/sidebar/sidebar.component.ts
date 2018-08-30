@@ -10,6 +10,14 @@ export class SidebarComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $(".sidebar .card").click(function(){
+      if($(this).hasClass("open")){
+        $(this).removeClass("open");
+      }else{
+        $(".sidebar .card").removeClass("open");
+        $(this).addClass("open");
+      }
+    });
     
   }
 

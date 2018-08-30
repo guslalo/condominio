@@ -1,0 +1,23 @@
+.sidebar {
+    .accordion {
+        * {
+            border:none;
+        }
+        .card{
+            background: none;
+            &.open {
+                background: red;
+            }
+        }
+        .card-header {
+            padding: 0px 0px;
+            background: none;
+            a{
+                display: inline-block;
+                color: #ffffff;
+                width: 100%;
+                text-align: left;
+            }
+        }
+    }
+}
