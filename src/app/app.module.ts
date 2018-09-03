@@ -2,6 +2,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 //modulos
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -20,6 +22,9 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { MainComponent } from './components/shared/main/main.component';
 import { SidebarComponent } from './components/shared/sidebar/sidebar.component';
+
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { VerticalBarComponent } from './components/charts/vertical-bar/vertical-bar.component';
 
 
 const appRoutes: Routes = [
@@ -60,11 +65,14 @@ const appRoutes: Routes = [
     MainComponent,
     LoginComponent,
     DashboardComponent,
-    SidebarComponent
+    SidebarComponent,
+    VerticalBarComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
+    NgxChartsModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: false },

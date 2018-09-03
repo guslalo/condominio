@@ -1,19 +1,29 @@
-<p>
-  dashboard works!
-</p>
+<div class="row">
+  <div class="col mb-4">
+    <h2>
+      Dashboard
+    </h2>
+  </div>
+</div>
+
 
 <div class="row">
   <div class="col-md-5">
       <div class="card mb-4">
           <h5 class="card-header">Finanzas</h5>
           <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Launch demo modal
-          </button>
+            <h5 class="card-title" style="display:none">Special title treatment</h5>
+            <ngx-charts-pie-chart
+            [view]="view"
+            [scheme]="colorScheme"
+            [results]="single"
+            [legend]="showLegend"
+            [explodeSlices]="explodeSlices"
+            [labels]="showLabels"
+            [doughnut]="doughnut"
+            [gradient]="gradient"
+            (select)="onSelect($event)">
+          </ngx-charts-pie-chart>
           </div>
         </div>
 
@@ -23,12 +33,9 @@
           <h5 class="card-header">Morosos</h5>
           <div class="card-body">
             <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+           <app-vertical-bar></app-vertical-bar>
             
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Launch demo modal
-          </button>
+      
           </div>
         </div>
   </div>
